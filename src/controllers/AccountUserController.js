@@ -8,7 +8,7 @@ class AccountUserController {
       const accountUser = await AccountUser.create(request.body);
       return response.status(201).json(accountUser);
     } catch (e) {
-      return response.status(500).json({ error: `${e.errors.map((error) => error.message)}` });
+      return response.status(500).json({ error: `${e}` });
     }
   }
 

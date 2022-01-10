@@ -56,6 +56,9 @@ TOKEN_EXPIRED=1d
 ## Execute Migrations
 - npx sequelize db:migrate
 
+## Undo Migrations
+- npx sequelize-cli db:migrate:undo:all
+
 ## Create seeders
 - npx sequelize seed:generate --name create_users
 
