@@ -17,6 +17,6 @@ export default (request, response, next) => {
     request.email = email;
     return next();
   } catch (e) {
-    return response.status(500).json({ error: e.erros });
+    return response.status(500).json({ error: 'User not authorized' });
   }
 };

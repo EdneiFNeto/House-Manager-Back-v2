@@ -4,7 +4,7 @@ import userController from '../controllers/UserController';
 import loginController from '../controllers/LoginController';
 import typeAccountController from '../controllers/TypeAccountController';
 import AccountUserController from '../controllers/AccountUserController';
-import loginRequired from '../middlewares/loginRequired';
+import accessTokenRequired from '../middlewares/accessTokenRequired';
 
 const router = new Router();
 
@@ -14,7 +14,7 @@ router.post('/login', loginController.store);
 router.post('/user', userController.store);
 
 /** Middleware */
-// router.use(loginRequired);
+router.use(accessTokenRequired);
 
 router.get('/home', homeController.index);
 router.post('/home', homeController.store);
