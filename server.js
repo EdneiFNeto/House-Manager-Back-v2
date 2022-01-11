@@ -1,6 +1,7 @@
 import app from './app';
 
-const port = 3001;
+const port = process.env.APP_PORT || 3000;
+
 app.listen(port, '192.168.1.108', () => {
-  console.log('Run port', port);
+  console.info('Run port', port);
 });
