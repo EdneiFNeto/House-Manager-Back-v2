@@ -1,10 +1,12 @@
 import { Router } from 'express';
+import accessTokenRequired from '../middlewares/accessTokenRequired';
+
 import homeController from '../controllers/HomeController';
 import userController from '../controllers/UserController';
 import loginController from '../controllers/LoginController';
 import typeAccountController from '../controllers/TypeAccountController';
 import AccountUserController from '../controllers/AccountUserController';
-import accessTokenRequired from '../middlewares/accessTokenRequired';
+import TestController from '../controllers/TestController';
 
 const router = new Router();
 
@@ -35,5 +37,6 @@ router.delete('/account-user/:id', AccountUserController.delete);
 router.put('/account-user/:id', AccountUserController.update);
 
 // Testando heroku
+router.get('/test', TestController.index);
 
 export default router;
