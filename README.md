@@ -39,14 +39,14 @@ module.exports = {
 
 ## Config .env
 
-DATABASE=escola
-DATABASE_HOST=localhost
-DATABASE_PORT=3306
-DATABASE_USERNAME=root
-DATABASE_PASSWORD=''
+- DATABASE=escola
+- DATABASE_HOST=localhost
+- DATABASE_PORT=3306
+- DATABASE_USERNAME=root
+- DATABASE_PASSWORD=''
 
-TOKEN_SECRET='swededewdwedewd'
-TOKEN_EXPIRED=1d
+- TOKEN_SECRET='swededewdwedewd'
+- TOKEN_EXPIRED=1d
 
 
 
