@@ -1,6 +1,6 @@
 import app from './app';
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || process.env.APP_PORT;
 const URL = process.env.APP_URL;
 
 app.listen(port, URL, () => {
