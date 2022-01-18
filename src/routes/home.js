@@ -6,7 +6,6 @@ import userController from '../controllers/UserController';
 import loginController from '../controllers/LoginController';
 import typeAccountController from '../controllers/TypeAccountController';
 import AccountUserController from '../controllers/AccountUserController';
-import TestController from '../controllers/TestController';
 
 const router = new Router();
 
@@ -35,8 +34,5 @@ router.post('/account-user', AccountUserController.store);
 router.get('/account-user/:id', AccountUserController.show);
 router.delete('/account-user/:id', AccountUserController.delete);
 router.put('/account-user/:id', AccountUserController.update);
-
-// Testando heroku
-router.get('/test', TestController.index);
 
 export default router;
